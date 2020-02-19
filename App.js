@@ -1,19 +1,33 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import Main from './Screens/Main'
+import Second from './Screens/Second'
+import Third from './Screens/Third'
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Quiz App</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Main"
+          component={Main}
+          options={{title: 'Back'}}
+        />
+        <Stack.Screen
+          name="Second"
+          component={Second}
+          options={{title: 'Back'}}
+        />
+        <Stack.Screen
+          name="Third"
+          component={Third}
+          options={{title: 'Back'}}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
