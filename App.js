@@ -15,17 +15,14 @@ export default function App() {
         <Stack.Screen
           name="Main"
           component={Main}
-          options={{title: 'Back'}}
         />
         <Stack.Screen
           name="Second"
           component={Second}
-          options={{title: 'Back'}}
         />
         <Stack.Screen
           name="Third"
           component={Third}
-          options={{title: 'Back'}}
         />
       </Stack.Navigator>
     </NavigationContainer>
