@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { Component }from 'react';
 import { StyleSheet, Text, View, Button} from 'react-native';
 
-export default function Main({navigation}) {
+
+export default class Main extends Component {
+  render() {
     return (
       <View style={styles.container}>
         <Text>Main Screen</Text>
         <Button
           title="Go to Second Screen"
-          onPress={() => navigation.navigate('Second')}
+          onPress={() => this.props.navigation.navigate('Second')}
         />
       </View>
     );
+  }
 }
 
 const styles = StyleSheet.create({

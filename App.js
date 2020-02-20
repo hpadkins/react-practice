@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import React from 'react';
+import React, { Component }from 'react';
 import Main from './Screens/Main'
 import Second from './Screens/Second'
 import Third from './Screens/Third'
@@ -8,7 +8,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 
-export default function App() {
+export default class App extends Component {
+  render() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -27,4 +28,5 @@ export default function App() {
       </Stack.Navigator>
     </NavigationContainer>
   );
+  }
 }
