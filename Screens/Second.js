@@ -1,6 +1,5 @@
 import React, { Component }from 'react';
 import { StyleSheet, Text, View, Button} from 'react-native';
-import { CheckBox } from 'react-native-elements'
 
 export default class Second extends Component {
   render() {
@@ -8,12 +7,8 @@ export default class Second extends Component {
       <View style={styles.container}>
         <Text>Second Screen</Text>
         <Button
-          title="Go to Third Screen"
+          title="Finish!"
           onPress={() => this.props.navigation.navigate('Third')}
-        />
-        <CheckBox
-          title="CLick Here"
-          checked={this.props.checked}
         />
       </View>
     );
