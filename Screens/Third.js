@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { Component }from 'react';
 import { StyleSheet, Text, View, Button} from 'react-native';
 
-export default function Third({navigation}) {
+
+export default class Third extends Component {
+  render() {
     return (
       <View style={styles.container}>
         <Text>Third Screen</Text>
+
       </View>
     );
+  }
 }
 
 const styles = StyleSheet.create({

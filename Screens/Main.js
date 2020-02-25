@@ -1,16 +1,23 @@
-import React from 'react';
-import { StyleSheet, Text, View, Button} from 'react-native';
+import React, { Component }from 'react';
+import {CheckBox} from 'react-native-elements';
+import { StyleSheet, Text, View, Button, TextInput} from 'react-native';
 
-export default function Main({navigation}) {
+
+
+export default class Main extends Component {
+  construtor(props) {
+
+  }
+  render() {
     return (
       <View style={styles.container}>
-        <Text>Main Screen</Text>
         <Button
-          title="Go to Second Screen"
-          onPress={() => navigation.navigate('Second')}
+          title="Start Quiz!"
+          onPress={() => this.props.navigation.navigate('Second')}
         />
       </View>
     );
+  }
 }
 
 const styles = StyleSheet.create({
