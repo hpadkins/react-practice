@@ -1,19 +1,30 @@
-import React, { Component }from 'react';
+import React, { Component } from 'react';
 import {CheckBox} from 'react-native-elements';
 import { StyleSheet, Text, View, Button, TextInput} from 'react-native';
 
 
 
-export default class Main extends Component {
-  construtor(props) {
-
+class Main extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {isChecked: false};
   }
+
+  checking = () => {
+    this.setState( {isChecked: !this.state.isChecked})
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <Button
           title="Start Quiz!"
           onPress={() => this.props.navigation.navigate('Second')}
+        />
+        <CheckBox
+          title = 'Check Here'
+          value= {this.state.isChecked}
+          onChange = { () => this.checking()}
         />
       </View>
     );
@@ -28,3 +39,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   }
 });
+
+export default Main;
