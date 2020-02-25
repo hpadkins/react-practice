@@ -12,16 +12,15 @@ export default class Second extends Component {
 
   reed = () => {
     //console.log(this.state.answers.one + " " +this.state.answers.two)
-    if(this.state.answers.one == "Harriet" && this.state.answers.two == "Hummel")
+    if(this.state.answers.one == "Salem" && this.state.answers.two == "Hummel")
     {
 
       alert(
-        'Alert Title',
-        'My Alert msg'
+        'Correct!'
       )
     }
     else{
-      alert("Wrong!!!!")
+      alert("Wrong!!!! Try again.")
       this.setState({answers: {one: "", two: ""}});
     }
   }
